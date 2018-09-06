@@ -1,0 +1,17 @@
+
+@model calculadora_net_core.Models.VariableViewModel    
+@{    
+    Layout = null;    
+}    
+@using(Html.BeginForm()) { <fieldset> <legend style = "color:blue"> Operaciones de 2 numeros </legend>    
+    @Html.EditorFor(x => x.A) <br/> <br/> @Html.EditorFor(x => x.B) <br/> <br/> <input type = "submit"    
+    value = "add"    
+    name = "command" /> <input type = "submit"    
+    value = "sub"    
+    name = "command" /> <input type = "submit"    
+    value = "mul"    
+    name = "command" /> <input type = "submit"    
+    value = "div"    
+    name = "command" /> <br/> <br/> <h2 style = "color:red" > @Html.Label("Result is :")    
+    @Html.DisplayFor(x => x.Result) </h2> </fieldset>    
+}
